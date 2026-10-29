@@ -1,0 +1,1082 @@
+[
+{
+  "model": "almacen.producto",
+  "pk": 3,
+  "fields": {
+    "nombre": "Gorra",
+    "descripcion": "clemont",
+    "precio": "58000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 4,
+  "fields": {
+    "nombre": "Gorra",
+    "descripcion": "hugo boss",
+    "precio": "50000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 5,
+  "fields": {
+    "nombre": "Gorra",
+    "descripcion": "cat",
+    "precio": "58000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 6,
+  "fields": {
+    "nombre": "Gorra",
+    "descripcion": "Goorin Bros",
+    "precio": "55000.00",
+    "stock": 40
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 7,
+  "fields": {
+    "nombre": "Gorra",
+    "descripcion": "hast virgen",
+    "precio": "58000.00",
+    "stock": 30
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 8,
+  "fields": {
+    "nombre": "Gorra",
+    "descripcion": "gucci",
+    "precio": "68000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 9,
+  "fields": {
+    "nombre": "Gorra",
+    "descripcion": "louis vuitton",
+    "precio": "68000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 10,
+  "fields": {
+    "nombre": "Gorra",
+    "descripcion": "adidas",
+    "precio": "58000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 11,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "bumerang",
+    "precio": "98000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 12,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "bumerang",
+    "precio": "98000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 13,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "bumernag",
+    "precio": "98000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 14,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "bumerang",
+    "precio": "98000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 15,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "bumernag",
+    "precio": "98000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 16,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "bumernag",
+    "precio": "98000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 17,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "bumernag",
+    "precio": "98000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 18,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "88000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 19,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "88000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 20,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "88000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 21,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "88000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 22,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "88000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 23,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "88000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 24,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "98000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 25,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "98000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 26,
+  "fields": {
+    "nombre": "Jean",
+    "descripcion": "huba",
+    "precio": "98000.00",
+    "stock": 8
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 27,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "nike - clasica - Talla M",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 28,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "nike - clasica - Talla L",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 29,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "nike - clasica - Talla XL",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 30,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "adidas - clasica - Talla M",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 31,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "adidas - clasica - Talla L",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 32,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "adidas - clasica - Talla XL",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 33,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "nike - deportiva licrada - Talla M",
+    "precio": "68000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 34,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "nike - deportiva licrada - Talla L",
+    "precio": "68000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 35,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "nike - deportiva licrada - Talla XL",
+    "precio": "68000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 36,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "nike - playera - Talla M",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 37,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "nike - playera - Talla L",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 38,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "adidas - playera - Talla M",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 39,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "adidas - playera - Talla L",
+    "precio": "58000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 40,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "adidas - playera - Talla XL",
+    "precio": "68000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 41,
+  "fields": {
+    "nombre": "Pantalonetas",
+    "descripcion": "adidas - playera - Talla XXL",
+    "precio": "68000.00",
+    "stock": 0
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 42,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "78000.00",
+    "stock": 25
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 43,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "78000.00",
+    "stock": 30
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 44,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "78000.00",
+    "stock": 30
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 45,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "78000.00",
+    "stock": 30
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 46,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "78000.00",
+    "stock": 25
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 47,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "78000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 48,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "88000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 49,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "88000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 50,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "88000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 51,
+  "fields": {
+    "nombre": "Bermudas",
+    "descripcion": "pailot",
+    "precio": "98000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 52,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "monastery",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 53,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "monastery",
+    "precio": "78000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 54,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "monastery",
+    "precio": "78000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 55,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "monastery",
+    "precio": "88000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 56,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "monastery",
+    "precio": "98000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 57,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "hugo boss",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 58,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "hugo boss",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 59,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "hugo boss",
+    "precio": "78000.00",
+    "stock": 5
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 60,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "polo",
+    "precio": "78000.00",
+    "stock": 5
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 61,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "polo",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 62,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "tommy",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 63,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "tommy",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 64,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "clemont",
+    "precio": "78000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 65,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "clemont",
+    "precio": "78000.00",
+    "stock": 25
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 66,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "clemont",
+    "precio": "88000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 67,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "clemont",
+    "precio": "98000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 68,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "burberry",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 69,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "burberry",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 70,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "lacoste",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 71,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "lacoste",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 72,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "le coq",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 73,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "le coq",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 74,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "calvin lkein",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 75,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "calvin klein",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 76,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "ax armani",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 77,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "ax armani",
+    "precio": "78000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 78,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "levis",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 79,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "levis",
+    "precio": "88000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 80,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "monastery",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 81,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "monastery",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 82,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "monastery",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 83,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "hugo boss",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 84,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "hugo boss",
+    "precio": "78000.00",
+    "stock": 20
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 85,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "hugo boss",
+    "precio": "88000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 86,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "hugo boss",
+    "precio": "88000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 87,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "polo",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 88,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "polo",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 89,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "polo",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 90,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "lacoste",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 91,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "lacoste",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 92,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "lacoste",
+    "precio": "88000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 93,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "lacoste",
+    "precio": "88000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 94,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "le coq",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 95,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "le coq",
+    "precio": "78000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 96,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "le coq",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 97,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "le coq",
+    "precio": "88000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 98,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "tommy",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 99,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "tommy",
+    "precio": "78000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 100,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "burberry",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 101,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "burberry",
+    "precio": "78000.00",
+    "stock": 15
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 102,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "ax armani",
+    "precio": "78000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 103,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "ax armani",
+    "precio": "78000.00",
+    "stock": 12
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 104,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "adidas",
+    "precio": "58000.00",
+    "stock": 8
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 105,
+  "fields": {
+    "nombre": "Busos",
+    "descripcion": "hunder",
+    "precio": "58000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 106,
+  "fields": {
+    "nombre": "Camisa",
+    "descripcion": "Lacoste",
+    "precio": "60000.00",
+    "stock": 8
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 107,
+  "fields": {
+    "nombre": "Camisa",
+    "descripcion": "Guchi",
+    "precio": "120000.00",
+    "stock": 10
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 108,
+  "fields": {
+    "nombre": "tenis",
+    "descripcion": "adidas",
+    "precio": "150000.00",
+    "stock": 1
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 109,
+  "fields": {
+    "nombre": "apache",
+    "descripcion": "adidas",
+    "precio": "100000.00",
+    "stock": 2
+  }
+},
+{
+  "model": "almacen.producto",
+  "pk": 110,
+  "fields": {
+    "nombre": "apache",
+    "descripcion": "ardidas",
+    "precio": "2000.00",
+    "stock": 100000
+  }
+}
+]

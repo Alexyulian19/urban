@@ -18,3 +18,4 @@ dist/
 datos_almacen.json
 datos_viejos.json
 bd_almacen.sql
+datos_clientes_ventas.json
