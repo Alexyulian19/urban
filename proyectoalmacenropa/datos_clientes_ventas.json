@@ -1,0 +1,44 @@
+[
+{
+  "model": "almacen.cliente",
+  "pk": 1,
+  "fields": {
+    "nombre": "Alex Yulian Caviedes",
+    "email": "Alex@gamil.com",
+    "telefono": "3178143053",
+    "direccion": "crr12"
+  }
+},
+{
+  "model": "almacen.cliente",
+  "pk": 2,
+  "fields": {
+    "nombre": "Juan David A",
+    "email": "Juan@fet.edu.co",
+    "telefono": "3203400812",
+    "direccion": "Galindo"
+  }
+},
+{
+  "model": "almacen.cliente",
+  "pk": 3,
+  "fields": {
+    "nombre": "emanuel",
+    "email": "emanuel@gmail.com",
+    "telefono": "3112345465",
+    "direccion": "carrera 5# 15-8"
+  }
+},
+{
+  "model": "almacen.venta",
+  "pk": 1,
+  "fields": {
+    "cliente": 1,
+    "producto": 59,
+    "cantidad": 5,
+    "fecha": "2026-10-29T02:50:57.945Z",
+    "total": "390000.00",
+    "vendedor": 1
+  }
+}
+]
