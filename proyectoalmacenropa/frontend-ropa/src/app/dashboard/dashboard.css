@@ -1,0 +1,80 @@
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Tarjetas de indicadores */
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.indicador { display: flex; flex-direction: column; gap: 4px; }
+.indicador .titulo { color: var(--texto-suave); font-size: 13px; }
+.indicador strong { font-size: 30px; font-weight: 600; line-height: 1.2; }
+.indicador .detalle { color: var(--texto-tenue); font-size: 12px; }
+.indicador.alerta strong { color: var(--amarillo); }
+
+.con-grafica { flex-direction: row; justify-content: space-between; align-items: center; gap: 10px; }
+.con-grafica > div { display: flex; flex-direction: column; gap: 4px; }
+.minigrafica { width: 90px; height: 40px; overflow: visible; }
+.minigrafica polyline {
+  fill: none;
+  stroke: var(--primario);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Tabla + columna lateral */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.columna { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+
+/* Estado del inventario */
+.disponibilidad { margin: 0 0 12px; color: var(--texto-suave); font-size: 13px; }
+.disponibilidad strong { color: var(--texto); font-size: 20px; margin-right: 4px; }
+.barra { display: flex; height: 10px; border-radius: 999px; overflow: hidden; background: var(--fondo); }
+.tramo { height: 100%; }
+.verde { background: var(--verde); }
+.amarillo { background: #f59e0b; }
+.rojo { background: var(--rojo); }
+
+.leyenda { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 8px; }
+.leyenda li { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--texto-suave); }
+.leyenda i { width: 10px; height: 10px; border-radius: 3px; }
+.leyenda strong { margin-left: auto; color: var(--texto); }
+
+/* Últimas ventas */
+.ventas-recientes { list-style: none; padding: 0; margin: 0; }
+.ventas-recientes li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borde);
+}
+.ventas-recientes li:last-child { border-bottom: none; }
+.ventas-recientes div { display: flex; flex-direction: column; min-width: 0; }
+.ventas-recientes strong { font-size: 13px; font-weight: 600; }
+.ventas-recientes span { font-size: 12px; color: var(--texto-tenue); }
+.ventas-recientes b { color: var(--primario); font-size: 13px; white-space: nowrap; }
+.ventas-recientes .vacio { justify-content: center; color: var(--texto-suave); }
+
+@media (max-width: 1100px) {
+  .indicadores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .indicadores { grid-template-columns: 1fr; }
+}

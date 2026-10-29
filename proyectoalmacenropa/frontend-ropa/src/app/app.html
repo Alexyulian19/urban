@@ -1,0 +1,68 @@
+@if (enLogin) {
+  <router-outlet></router-outlet>
+} @else {
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="logo" title="Almacén Ropa">AR</div>
+
+    <nav class="menu">
+      <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">
+        <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+        <span>Panel</span>
+      </a>
+      <a routerLink="/productos" routerLinkActive="activo">
+        <svg viewBox="0 0 24 24"><path d="M8 4 4 7l2 4 2-1v10h8V10l2 1 2-4-4-3"/><path d="M8 4c0 2 2 3 4 3s4-1 4-3"/></svg>
+        <span>Productos</span>
+      </a>
+      <a routerLink="/clientes" routerLinkActive="activo">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2.1.7 3.5 2.8 3.5 5.7"/></svg>
+        <span>Clientes</span>
+      </a>
+      <a routerLink="/ventas" routerLinkActive="activo">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+        <span>Ventas</span>
+      </a>
+    </nav>
+
+    <div class="usuario">
+      <div class="avatar" [title]="auth.sesion?.nombre">{{ iniciales }}</div>
+      <span class="rol">{{ auth.sesion?.rol }}</span>
+      <button class="salir" (click)="salir()" title="Cerrar sesión">
+        <svg viewBox="0 0 24 24"><path d="M15 4h4v16h-4"/><path d="M10 8l-4 4 4 4M6 12h10"/></svg>
+        <span>Salir</span>
+      </button>
+    </div>
+  </aside>
+
+  <section class="main-section">
+    <header class="topbar">
+      <nav class="migas" aria-label="Migas de pan">
+        <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg>
+        <a routerLink="/">Inicio</a>
+        <span class="sep">›</span>
+        <strong>{{ seccion }}</strong>
+      </nav>
+
+      <div class="topbar-derecha">
+        <label class="buscador-top">
+          <input #busquedaTop type="search" placeholder="Ir a… (productos, clientes, ventas)"
+                 (keyup.enter)="irA(busquedaTop.value); busquedaTop.value = ''" />
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </label>
+
+        <div class="perfil">
+          <div class="perfil-texto">
+            <strong>{{ auth.sesion?.nombre }}</strong>
+            <span>{{ auth.sesion?.rol }}</span>
+          </div>
+          <div class="avatar">{{ iniciales }}</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <router-outlet></router-outlet>
+    </main>
+  </section>
+</div>
+}

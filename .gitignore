@@ -1,0 +1,20 @@
+﻿# Entorno de Python
+env/
+__pycache__/
+*.pyc
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+
+# Variables de entorno
+.env
+
+# Editor
+.vscode/
+
+# Datos de clientes (se comparten aparte)
+datos_almacen.json
+datos_viejos.json
+bd_almacen.sql

@@ -1,0 +1,18 @@
+/* Los estilos de tarjetas, tablas, formularios y etiquetas están en src/styles.css */
+.tabla { min-width: 820px; }
+
+/* Nombre del cliente con su inicial en un círculo */
+.cliente { display: flex; align-items: center; gap: 10px; }
+.inicial {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primario-suave);
+  color: var(--primario);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}

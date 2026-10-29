@@ -1,0 +1,99 @@
+<section class="page-header">
+  <h2>Clientes</h2>
+  <p>Gestiona los clientes registrados.</p>
+</section>
+
+<div class="content-grid">
+  <div class="card">
+    <div class="card-header">
+      <h3>{{ clienteEditandoId ? 'Editar cliente' : 'Nuevo cliente' }}</h3>
+      @if (clienteEditandoId) { <span class="etiqueta etiqueta-azul">ID {{ clienteEditandoId }}</span> }
+    </div>
+
+    <div class="form-grid">
+      <label for="c-nombre">Nombre</label>
+      <input id="c-nombre" type="text" [(ngModel)]="nuevoCliente.nombre" placeholder="Nombre"
+             [class.invalido]="intentoGuardar && errNombre" />
+      @if (intentoGuardar && errNombre) { <span class="campo-error">{{ errNombre }}</span> }
+
+      <label for="c-email">Correo</label>
+      <input id="c-email" type="email" [(ngModel)]="nuevoCliente.email" placeholder="Correo"
+             [class.invalido]="intentoGuardar && errEmail" />
+      @if (intentoGuardar && errEmail) { <span class="campo-error">{{ errEmail }}</span> }
+
+      <label for="c-tel">Teléfono</label>
+      <input id="c-tel" type="text" [(ngModel)]="nuevoCliente.telefono" placeholder="Teléfono"
+             [class.invalido]="intentoGuardar && errTelefono" />
+      @if (intentoGuardar && errTelefono) { <span class="campo-error">{{ errTelefono }}</span> }
+
+      <label for="c-dir">Dirección</label>
+      <input id="c-dir" type="text" [(ngModel)]="nuevoCliente.direccion" placeholder="Dirección"
+             [class.invalido]="intentoGuardar && errDireccion" />
+      @if (intentoGuardar && errDireccion) { <span class="campo-error">{{ errDireccion }}</span> }
+    </div>
+
+    @if (mensaje) { <div class="msg msg-ok">{{ mensaje }}</div> }
+    @if (error) { <div class="msg msg-error">{{ error }}</div> }
+
+    <button class="btn btn-primario btn-bloque" (click)="guardarCliente()" [disabled]="guardando">
+      {{ clienteEditandoId ? 'Actualizar cliente' : 'Guardar cliente' }}
+    </button>
+    @if (clienteEditandoId) {
+      <button class="btn btn-secundario btn-bloque" (click)="limpiarFormulario()">Cancelar edición</button>
+    }
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3>Listado de clientes</h3>
+      <span class="contador"><span>{{ clientes.length }}</span> registros</span>
+    </div>
+
+    <div class="filtros">
+      <input class="buscador" type="search" placeholder="Buscar por nombre, correo o teléfono…"
+             [(ngModel)]="busqueda" (input)="cargarClientes()" />
+    </div>
+
+    @if (errorCarga) { <div class="msg msg-error">{{ errorCarga }}</div> }
+
+    <div class="table-wrapper">
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <td class="tenue">{{ cliente.id }}</td>
+            <td>
+              <div class="cliente">
+                <span class="inicial">{{ cliente.nombre?.charAt(0) }}</span>
+                <span class="fuerte">{{ cliente.nombre }}</span>
+              </div>
+            </td>
+            <td class="tenue">{{ cliente.email }}</td>
+            <td>{{ cliente.telefono }}</td>
+            <td class="tenue">{{ cliente.direccion }}</td>
+            <td>
+              <div class="acciones">
+                <button class="btn-mini btn-editar" (click)="editarCliente(cliente)">Editar</button>
+                @if (auth.esAdmin) {
+                  <button class="btn-mini btn-eliminar" (click)="eliminarCliente(cliente)">Eliminar</button>
+                }
+              </div>
+            </td>
+          </tr>
+          @if (!errorCarga && clientes.length === 0) {
+            <tr><td colspan="6" class="vacio">{{ busqueda ? 'No hay clientes que coincidan con la búsqueda.' : 'No hay clientes registrados.' }}</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

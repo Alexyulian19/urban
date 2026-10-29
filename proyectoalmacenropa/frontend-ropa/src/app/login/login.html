@@ -1,0 +1,19 @@
+<div class="login-page">
+  <form class="login-card" (ngSubmit)="ingresar()">
+    <div class="logo">AR</div>
+    <h2>Almacén Ropa</h2>
+    <p>Ingrese con su usuario para continuar</p>
+
+    <label for="usuario">Usuario</label>
+    <input id="usuario" name="usuario" [(ngModel)]="usuario" autocomplete="username" />
+
+    <label for="clave">Contraseña</label>
+    <input id="clave" name="clave" type="password" [(ngModel)]="clave" autocomplete="current-password" />
+
+    @if (error) {
+      <div class="msg msg-error">{{ error }}</div>
+    }
+
+    <button class="btn btn-primario btn-bloque" type="submit" [disabled]="cargando">{{ cargando ? 'Ingresando…' : 'Ingresar' }}</button>
+  </form>
+</div>

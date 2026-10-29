@@ -1,0 +1,131 @@
+<section class="page-header encabezado">
+  <div>
+    <h2>Panel</h2>
+    <p>Estado del inventario, los clientes y las ventas en una sola vista.</p>
+  </div>
+
+  @if (cargandoGeneral) {
+    <span class="etiqueta etiqueta-azul">Verificando conexión…</span>
+  } @else if (conectado) {
+    <span class="etiqueta etiqueta-verde">● Servidor operativo</span>
+  } @else {
+    <span class="etiqueta etiqueta-rojo">● Sin conexión</span>
+  }
+</section>
+
+<div class="msg msg-info" *ngIf="cargandoGeneral">Cargando datos del tablero...</div>
+<div class="msg msg-error" *ngIf="errorProductos || errorClientes || errorVentas">
+  {{ errorProductos || errorClientes || errorVentas }}
+</div>
+
+<div class="indicadores">
+  <div class="card indicador">
+    <span class="titulo">Productos</span>
+    <strong>{{ totalProductos }}</strong>
+    <span class="detalle">Productos registrados</span>
+  </div>
+
+  <div class="card indicador">
+    <span class="titulo">Clientes</span>
+    <strong>{{ totalClientes }}</strong>
+    <span class="detalle">Clientes en la base de datos</span>
+  </div>
+
+  <div class="card indicador con-grafica">
+    <div>
+      <span class="titulo">Ventas</span>
+      <strong>{{ totalVentas }}</strong>
+      <span class="detalle">{{ ventasSemana }} en los últimos 7 días</span>
+    </div>
+    <svg class="minigrafica" viewBox="0 0 100 40" preserveAspectRatio="none"
+         aria-label="Ventas por día de los últimos 7 días">
+      <polyline [attr.points]="puntosVentas" />
+    </svg>
+  </div>
+
+  <div class="card indicador alerta">
+    <span class="titulo">Stock bajo</span>
+    <strong>{{ stockBajo }}</strong>
+    <span class="detalle">Productos con 5 unidades o menos</span>
+  </div>
+</div>
+
+<div class="dashboard-grid">
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h3>Últimos productos</h3>
+        <p>Resumen rápido del inventario actual</p>
+      </div>
+      <span class="contador"><span>{{ totalProductos }}</span> artículos</span>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Existencias</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productos.slice(0, 6)">
+            <td class="fuerte">{{ producto.nombre }}</td>
+            <td class="tenue">{{ producto.descripcion }}</td>
+            <td>{{ producto.stock }}</td>
+            <td>
+              @if (producto.stock <= 0) {
+                <span class="etiqueta etiqueta-rojo">Agotado</span>
+              } @else if (producto.stock <= 5) {
+                <span class="etiqueta etiqueta-amarillo">Stock bajo</span>
+              } @else {
+                <span class="etiqueta etiqueta-verde">Disponible</span>
+              }
+            </td>
+          </tr>
+
+          <tr *ngIf="!cargandoProductos && productos.length === 0">
+            <td colspan="4" class="vacio">No hay productos registrados todavía.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="columna">
+    <div class="card">
+      <div class="card-header">
+        <h3>Estado del inventario</h3>
+      </div>
+      <p class="disponibilidad"><strong>{{ disponibilidad }}%</strong> de los productos tiene más de 5 unidades</p>
+      <div class="barra">
+        <div class="tramo verde" [style.width.%]="totalProductos ? ((totalProductos - stockBajo) / totalProductos) * 100 : 0"></div>
+        <div class="tramo amarillo" [style.width.%]="totalProductos ? ((stockBajo - agotados) / totalProductos) * 100 : 0"></div>
+        <div class="tramo rojo" [style.width.%]="totalProductos ? (agotados / totalProductos) * 100 : 0"></div>
+      </div>
+      <ul class="leyenda">
+        <li><i class="verde"></i> Disponible <strong>{{ totalProductos - stockBajo }}</strong></li>
+        <li><i class="amarillo"></i> Stock bajo <strong>{{ stockBajo - agotados }}</strong></li>
+        <li><i class="rojo"></i> Agotado <strong>{{ agotados }}</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Últimas ventas</h3>
+      </div>
+      <ul class="ventas-recientes">
+        <li *ngFor="let v of ventas.slice(0, 5)">
+          <div>
+            <strong>{{ v.producto_nombre }}</strong>
+            <span>{{ v.cliente_nombre }} · {{ v.fecha | date:'dd/MM h:mm a' }}</span>
+          </div>
+          <b>{{ v.total | currency:'COP':'symbol-narrow':'1.0-0' }}</b>
+        </li>
+        <li *ngIf="!cargandoVentas && ventas.length === 0" class="vacio">No hay ventas registradas.</li>
+      </ul>
+    </div>
+  </div>
+</div>

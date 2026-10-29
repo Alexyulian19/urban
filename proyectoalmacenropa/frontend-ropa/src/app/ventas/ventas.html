@@ -1,0 +1,111 @@
+<section class="page-header">
+  <h2>Ventas</h2>
+  <p>Registra y consulta las ventas.</p>
+</section>
+
+<div class="content-grid">
+  <div class="card">
+    <div class="card-header">
+      <h3>{{ ventaEditandoId ? 'Editar venta #' + ventaEditandoId : 'Nueva venta' }}</h3>
+    </div>
+
+    <div class="form-grid">
+      <label for="v-cliente">Cliente</label>
+      <select id="v-cliente" [(ngModel)]="nuevaVenta.cliente" [class.invalido]="intentoGuardar && errCliente">
+        <option value="">Seleccione el cliente</option>
+        <option *ngFor="let c of clientes" [value]="c.id">{{ c.nombre }}</option>
+      </select>
+      @if (intentoGuardar && errCliente) { <span class="campo-error">{{ errCliente }}</span> }
+
+      <label for="v-producto">Producto</label>
+      <select id="v-producto" [(ngModel)]="nuevaVenta.producto" [class.invalido]="intentoGuardar && errProducto">
+        <option value="">Seleccione el producto</option>
+        <option *ngFor="let p of productos" [value]="p.id" [disabled]="p.stock === 0 && p.id != productoOriginal">
+          {{ p.nombre }} - {{ p.descripcion }} ({{ p.stock }} disp.)
+        </option>
+      </select>
+      @if (intentoGuardar && errProducto) { <span class="campo-error">{{ errProducto }}</span> }
+
+      <label for="v-cantidad">Cantidad</label>
+      <input id="v-cantidad" type="number" min="1" [max]="disponible" step="1" [(ngModel)]="nuevaVenta.cantidad"
+             placeholder="Cantidad" [class.invalido]="(intentoGuardar || productoSeleccionado) && errCantidad" />
+      @if ((intentoGuardar || productoSeleccionado) && errCantidad) { <span class="campo-error">{{ errCantidad }}</span> }
+
+      <label for="v-total">Total</label>
+      <input id="v-total" type="text" [value]="total | currency:'COP':'symbol-narrow':'1.0-0'" readonly />
+    </div>
+
+    @if (mensaje) { <div class="msg msg-ok">{{ mensaje }}</div> }
+    @if (error) { <div class="msg msg-error">{{ error }}</div> }
+
+    <button class="btn btn-primario btn-bloque" (click)="guardarVenta()" [disabled]="guardando">
+      {{ ventaEditandoId ? 'Actualizar venta' : 'Registrar venta' }}
+    </button>
+    @if (ventaEditandoId) {
+      <button class="btn btn-secundario btn-bloque" (click)="limpiarFormulario()">Cancelar edición</button>
+    }
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3>Historial de ventas</h3>
+      <span class="contador"><span>{{ ventas.length }}</span> registros</span>
+    </div>
+
+    <div class="filtros">
+      <input class="buscador" type="search" placeholder="Buscar por cliente o producto…"
+             [(ngModel)]="busqueda" (input)="cargarVentas()" />
+      <select class="filtro" [(ngModel)]="filtroCliente" (change)="cargarVentas()">
+        <option value="">Todas las ventas</option>
+        <option *ngFor="let c of clientes" [value]="c.id">Compras de {{ c.nombre }}</option>
+      </select>
+    </div>
+
+    @if (errorCarga) { <div class="msg msg-error">{{ errorCarga }}</div> }
+
+    <div class="table-wrapper">
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th>Vendedor</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let v of ventas">
+            <td class="tenue">#{{ v.id }}</td>
+            <td class="tenue">{{ v.fecha | date:'dd/MM/yyyy h:mm a' }}</td>
+            <td class="fuerte">{{ v.cliente_nombre }}</td>
+            <td>{{ v.producto_nombre }}</td>
+            <td>{{ v.cantidad }}</td>
+            <td class="fuerte">{{ v.total | currency:'COP':'symbol-narrow':'1.0-0' }}</td>
+            <td>
+              @if (v.vendedor_nombre) {
+                <span class="etiqueta etiqueta-azul">{{ v.vendedor_nombre }}</span>
+              } @else { <span class="tenue">—</span> }
+            </td>
+            <td>
+              @if (auth.esAdmin) {
+                <div class="acciones">
+                  <button class="btn-mini btn-editar" (click)="editarVenta(v)">Editar</button>
+                  <button class="btn-mini btn-eliminar" (click)="eliminarVenta(v)">Anular</button>
+                </div>
+              } @else {
+                <span class="tenue">—</span>
+              }
+            </td>
+          </tr>
+          @if (!errorCarga && ventas.length === 0) {
+            <tr><td colspan="8" class="vacio">No hay ventas para mostrar.</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
